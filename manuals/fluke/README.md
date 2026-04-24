@@ -4,9 +4,12 @@ A curated index of official Fluke-hosted PDF manuals for popular digital
 multimeter models. All links point to `assets.fluke.com`, `media.fluke.com`,
 or `dam-assets.fluke.com` (Fluke Corporation's public document servers).
 
-> Binaries were not cached locally because network egress to `fluke.com` is
-> blocked from the build sandbox. Click a link to download the manual
-> directly from Fluke.
+Run `./fetch-manuals.sh` to download all listed PDFs into `./pdf/`. The
+script is idempotent (uses `curl -z` to skip unchanged files). It requires
+network egress to `*.fluke.com`; under the Claude Code sandbox those hosts
+must be listed in `sandbox.network.allowedDomains` in settings.json.
+
+Or click any link below to download a manual directly from Fluke.
 
 Main Fluke manuals portal:
 <https://www.fluke.com/en-us/support/manuals>
